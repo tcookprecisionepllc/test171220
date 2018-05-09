@@ -1,0 +1,85 @@
+<openerp>
+  <data>
+    <!-- explicit list view definition -->
+  
+<!-- 
+    <record model="ir.ui.view" id="test171220.producttemplateform">
+      <field name="name">product.template.form.test171220.inherit</field>
+      <field name="model">product.template</field>
+	  <field name="inherit_id" ref="product.product_template_form_view"/>
+      <field name="arch" type="xml">
+		<xpath expr="//field[@name='x_last_counted_bakersfield']" position="after">
+			<field name="stocking_item"/>
+		</xpath>
+      </field>
+    </record>
+-->
+	
+<!--
+	<record model="ir.ui.view" id="test171220.mrpproductionform">
+      <field name="name">mrp.production.form.test171220.inherit</field>
+      <field name="model">mrp.production</field>
+	  <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+      <field name="arch" type="xml">
+		<xpath expr="//form/sheet/notebook/page[1]/field/tree/field[@name='product_id']" position="after">
+			<field name="description"/>
+		</xpath>
+      </field>
+    </record>
+-->
+
+<!--	
+	<record model="ir.ui.view" id="test171220.mrpreportmrporder">
+      <field name="name">mrp.production.report.test171220.inherit</field>
+      <field name="model">mrp.production</field>
+	  <field name="inherit_id" ref="mrp.report_mrporder"/>
+      <field name="arch" type="xml">
+		<xpath expr="//tbody/t/tr[2]" position="attributes">
+			<attribute name="t-foreach">o.move_raw_ids.sorted(key=lambda r: r.product_id.name)</attribute>
+		</xpath>
+	  </field>
+	</record>
+-->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="test171220.action_window">
+      <field name="name">test171220 window</field>
+      <field name="res_model">test171220.test171220</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="test171220.action_server">
+      <field name="name">test171220 server</field>
+      <field name="model_id" ref="model_test171220_test171220"/>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="test171220" id="test171220.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="test171220.menu_1" parent="test171220.menu_root"/>
+    <menuitem name="Menu 2" id="test171220.menu_2" parent="test171220.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="test171220.menu_1_list" parent="test171220.menu_1"
+              action="test171220.action_window"/>
+    <menuitem name="Server to list" id="test171220" parent="test171220.menu_2"
+              action="test171220.action_server"/>
+    -->
+  </data>
+</openerp>
